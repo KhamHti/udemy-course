@@ -15,16 +15,11 @@ const ListScreen = () => {
     <View style={styles.container}>
       <Text style={{ marginBottom: 20 }}>ListScreen</Text>
       <FlatList
+        keyExtractor={(item) => item.id}
         data={friends}
         showsVerticalScrollIndicator={false}
-        keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
-          return (
-            <View style={{flexDirection: "row", marginLeft: 20, marginVertical: 30}}>
-              <Text style={{marginRight: 10, fontSize: 18}}>{item.name}:</Text>
-              <Text style={{marginLeft: 10, fontSize: 18}}>Age:{item.age}</Text>
-            </View>
-          );
+          return <Text style={styles.textStyle}>{item.name} - Age:{item.age}</Text>;
         }}
       />
     </View>
@@ -39,5 +34,6 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     marginVertical: 59,
+    marginHorizontal: 20
   },
 });
