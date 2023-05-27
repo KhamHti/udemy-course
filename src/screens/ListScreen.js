@@ -7,15 +7,15 @@ const ListScreen = () => {
     { name: "Friend #2", age: 345 },
     { name: "Friend #3", age: 34 },
     { name: "Friend #234", age: 12 },
-    { name: "Friend #3", age: 28 },
+    { name: "Friend #3", age: 12 },
     { name: "Friend #5", age: 33 },
   ];
 
   return (
     <View style={styles.container}>
-      <Text style={{ marginBottom: 20 }}>ListScreen</Text>
+      <Text style={{fontSize: 18 }}>ListScreen</Text>
       <FlatList
-        keyExtractor={(item) => item.id}
+        keyExtractor={(friend) => friend.id}
         data={friends}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => {
