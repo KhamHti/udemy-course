@@ -1,21 +1,20 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import ImageDetails from "../components/ImageDetails";
 
-const ImageScreen = () => {
+const ImageDetails = ({title}) => {
   return (
     <View style={styles.container}>
-      <ImageDetails title="Hello"/>
-      <ImageDetails title="asdf" />
-      <ImageDetails title="red" />
+      <Text>{title}</Text>
     </View>
   );
 };
 
-export default ImageScreen;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: 100,
+    height: 100,
   },
 });
+
+export default ImageDetails;
