@@ -30,6 +30,11 @@ const HomeScreen = ({ navigation }) => {
         title="Go To Square Screen"
         onPress={() => navigation.navigate("Square")}
       />
+      <Button
+        style={styles.mt}
+        title="Go To Greeting Screen"
+        onPress={() => navigation.navigate("Greeting")}
+      />
     </View>
   );
 };
@@ -39,6 +44,9 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
   component: {
+    marginTop: 30,
+  },
+  mt: {
     marginTop: 30,
   },
 });
